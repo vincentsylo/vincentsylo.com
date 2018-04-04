@@ -1,0 +1,10 @@
+.hero {
+  background-color: var(--primaryColor);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+}

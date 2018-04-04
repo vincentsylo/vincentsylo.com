@@ -1,0 +1,46 @@
+.links {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  align-items: center;
+  border-radius: 25px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
+
+.linkedin {
+  color: #007FB1;
+}
+
+.github {
+  color: #24292e;
+}
+
+.linkedin:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+.github:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+.inverse {
+  color: #fff;
+}
+
+.linkedin.inverse:hover {
+  background-color: #fff;
+  color: #007FB1;
+}
+
+.github.inverse:hover {
+  background-color: #fff;
+  color: #24292e;
+}

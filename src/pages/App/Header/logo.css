@@ -1,0 +1,54 @@
+:root {
+  --maxScale: scale(1.1);
+  --animationSpeed: 2s;
+  --animationDelay: 2s;
+  --animationEasing: ease-in-out;
+}
+
+.header__logo {
+  background-color: var(--primaryColor);
+  height: 100px;
+  width: 100px;
+}
+
+.header__logo .logo__v {
+  animation: v var(--animationSpeed) var(--animationEasing) var(--animationDelay) forwards;
+  transform-origin: center;
+}
+
+@keyframes v {
+  80% {
+    transform: var(--maxScale) rotate(-100deg) translateX(220px) translateY(-40px);
+  }
+  100% {
+    transform: scale(1) rotate(-90deg) translateX(220px) translateY(-40px);
+  }
+}
+
+.header__logo .logo__l {
+  animation: l var(--animationSpeed) var(--animationEasing)  var(--animationDelay) forwards;
+  transform-origin: center;
+}
+
+@keyframes l {
+  80% {
+    transform: var(--maxScale) rotate(190deg) translateX(-220px) translateY(-40px);
+  }
+  100% {
+    transform: scale(1) rotate(180deg) translateX(-220px) translateY(-40px);
+  }
+}
+
+.header__logo .logo__slash {
+  animation: slash var(--animationSpeed) var(--animationEasing)  var(--animationDelay) forwards;
+  transform-origin: center;
+}
+
+@keyframes slash {
+  80% {
+    transform: var(--maxScale) rotate(-75deg) translateY(-50px) translateX(-100px);
+  }
+  100% {
+    transform: scale(1) rotate(-75deg) translateY(-40px) translateX(-90px);
+  }
+}

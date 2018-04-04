@@ -1,0 +1,62 @@
+.hero {
+  background-color: var(--primaryColor);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--supportedLargeWidth);
+  min-height: 200px;
+  padding: 40px 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+}
+
+.technology {
+  align-items: center;
+  background-color: var(--primaryColor);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  line-height: 1.5;
+  text-decoration: none;
+  width: 100px;
+}
+
+.container {
+  border: 1px solid #888;
+  padding: 8px;
+}
+
+.platforms {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.platform {
+  align-items: center;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  line-height: 1.5;
+  width: 100px;
+}
+

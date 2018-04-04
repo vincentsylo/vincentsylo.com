@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primaryColor: #ff6955;
+  --secondaryColor: #ddd;
+  --primaryTextColor: #333;
+  --supportedLargeWidth: 768px;
+}
