@@ -33,7 +33,7 @@ export default class Header extends Component {
         })}>
           {
             showNavModal ? (
-            <div className={cx(styles.flex, styles.menuHeader)}>
+            <div className={styles.menuHeader}>
               <Link to="/" onClick={this.onCloseNav}><Logo /></Link>
               <Link to="/" className={styles.title} onClick={this.onCloseNav}>vincentsylo</Link>
               <button onClick={this.onCloseNav} className={styles.closeButton}><i className="fal fa-3x fa-times" /></button>

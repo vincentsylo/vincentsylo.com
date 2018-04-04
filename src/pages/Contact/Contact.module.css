@@ -8,9 +8,22 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
 }
 
-.form input {
+.form > * {
+  margin-bottom: 8px;
+}
+
+.form input,
+.form textarea {
+  border: var(--secondaryColor) solid 1px;
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 16px 8px;
   width: 400px;
-  height: 40px;
+}
+
+.form textarea {
+  height: 200px;
 }

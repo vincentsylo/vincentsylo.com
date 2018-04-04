@@ -57,7 +57,9 @@
 }
 
 .menuHeader {
+  align-items: center;
   display: flex;
+  height: 100px;
   justify-content: space-between;
 }
 
@@ -80,7 +82,7 @@
     z-index: 10;
   }
 
-  .links > * {
+  .links > *:not(.menuHeader) {
     flex: 1;
   }
 
