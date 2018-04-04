@@ -29,6 +29,19 @@ export default class Home extends Component {
           <p>If you're interested in any of the above, or even working together - let's grab a coffee!</p>
           <Link to="/contact" className={styles.link}>Get in touch</Link>
         </div>
+
+        <div className={styles.section}>
+          <div className={styles.technologies}>
+            <span className={styles.technology}><i className="fal fa-2x fa-browser" />Web</span>
+            <span className={styles.technology}><i className="fal fa-2x fa-database" />Backend</span>
+            <span className={styles.technology}><i className="fab fa-2x fa-apple" />iOS</span>
+            <span className={styles.technology}><i className="fab fa-2x fa-android" />Android</span>
+            <span className={styles.technology}><i className="fab fa-2x fa-js" />JavaScript</span>
+            <span className={styles.technology}><i className="fab fa-2x fa-react" />React Native</span>
+            <span className={styles.technology}><i className="fab fa-2x fa-react" />React.js</span>
+            <span className={styles.technology}><i className="fab fa-2x fa-node-js" />Node.js</span>
+          </div>
+        </div>
       </div>
     );
   }

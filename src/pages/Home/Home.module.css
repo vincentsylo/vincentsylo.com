@@ -71,3 +71,23 @@
   visibility: visible;
   transform: scaleX(1);
 }
+
+.technologies {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.technology {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  line-height: 2;
+  text-decoration: none;
+  width: 100px;
+}

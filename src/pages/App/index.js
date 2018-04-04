@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Routes from '../Routes';
-import Services from '../Services';
 import scrollTo from '../../utils/scrollTo';
 
 class App extends Component {
@@ -27,10 +26,7 @@ class App extends Component {
       <Fragment>
         <Header />
 
-        <Switch>
-          <Route path="/services" component={Services} />
-          <Route component={Routes} />
-        </Switch>
+        <Routes />
 
         <Footer />
       </Fragment>
