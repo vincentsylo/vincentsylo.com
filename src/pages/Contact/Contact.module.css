@@ -27,3 +27,7 @@
 .form textarea {
   height: 200px;
 }
+
+.submitted {
+  padding: 40px;
+}

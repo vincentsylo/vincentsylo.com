@@ -12,7 +12,7 @@ export default class Routes extends Component {
         <div className={styles.hero}>
           <h1>Vincent Lo</h1>
           <h2>Software Engineer | Web &amp; Mobile Consultant</h2>
-          <span>I care. I'm passionate. I'm efficient. I'm genuine.</span>
+          <span>I'm passionate. I'm efficient. I'm genuine. I care.</span>
         </div>
 
         <Switch>
