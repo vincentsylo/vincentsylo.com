@@ -22,18 +22,17 @@ exports.submitContactForm = functions.https.onRequest((req, res) => {
       secret: recaptchaSecret,
       response: req.body['g-recaptcha-response']
     },
-    json: true
+    json: true,
   }).then(result => {
     if (result.success) {
-      sendEmail(req.body).then(()=> {
-        res.status(200).send(true);
-      });
+      sendEmail(req.body)
+        .then(() => res.status(200).send(true))
+        .catch(reason => res.status(500).send(reason));
     }
-    else {
-      res.status(500).send('Recaptcha failed.')
-    }
+
+    return res.status(500).send('Recaptcha failed.');
   }).catch(reason => {
-    res.status(500).send('Recaptcha req failed.')
+    return res.status(500).send(reason);
   })
 
 });
