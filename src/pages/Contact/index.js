@@ -14,13 +14,13 @@ export default class Contact extends Component {
   executeRecaptcha = (e) => {
     e.preventDefault();
     this.recaptchaInstance.execute();
+    console.log('executing recaptcha');
   };
 
   onSubmit = async () => {
     const { name, contact, description } = this.state;
-    await api.post('/api/contact', {
-      name, contact, description,
-    });
+    console.log('on submit');
+    await api.post('/api/contact', { name, contact, description });
     this.setState({ submitted: true });
   };
 
