@@ -1,0 +1,16 @@
+language: node_js
+cache:
+  yarn: true
+  directories:
+  - node_modules
+install:
+- yarn
+script:
+- yarn run build
+deploy:
+  provider: firebase
+  token:
+    secure: "$FIREBASE_TOKEN"
+  local_dir: build
+  on:
+    branch: master

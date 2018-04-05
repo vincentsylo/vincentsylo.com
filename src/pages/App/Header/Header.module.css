@@ -69,6 +69,11 @@
   padding: 0 16px;
 }
 
+.link:focus,
+.closeButton:focus {
+  outline: none;
+}
+
 @media (max-width: 768px) {
   .links {
     background-color: #fff;
