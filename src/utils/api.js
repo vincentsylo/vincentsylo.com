@@ -17,7 +17,7 @@ const axios = initializeAxios();
 
 export default {
   async get(url, params) {
-    await axios.get(url, { params });
+    const response = await axios.get(url, { params });
     return response.data;
   },
 
