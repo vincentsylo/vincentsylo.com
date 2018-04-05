@@ -12,7 +12,7 @@ script:
 deploy:
   provider: firebase
   token:
-    secure: $FIREBASE_TOKEN
+    secure: "G4mt6KwXhDSAJFGzA+dXQBZuV4qpOeRipHiY9U7NK+5AcnTXfXAgItVgFxn+u8sYas1x2sTcrfxJgNckVBr1SPR1+iLVs/zF5pq/sOMndmvonsPxMf7DYIYR4OdMd7WuCnNRQnlTqqkw4SCIgUtMPFZREgBRtB2SFTgqOWYfUNm2kU+1w74Cw7MOCNjZukxB6Xm3+/xy+pCVKTYTx4yjAFUfxDgdMoVe6rVzr9JSZCIRWOevhKXbtoMTyxAzX9BLm+8TIs5osB9BS8yTlp5gX5qQa2A/4Hyz2331A0N4JKmtM5fGI0gtjeEEtblSVjKolDiNUa95IQ/oMbLrgelPabUsN9Pg5Sb8Ocg2I1meUkUl2R/3YiyISUOhhHshEN8g7iSn/np7Ry5bwJ3TTxjCS0ICghIushyWqjkfIKV7ivjkkhKVAeH/Ks90jL+pE3Bo0OoIvTBmJmuSQZJm0Q0/Z6QQ8RmCJKMq3wNLeOjPnfITGbION9kAbigm79+OcWRDxwlQ6hbWcv5oVf4aXBdn1cMZcBiP8FyPuHAr6sbBcykPVGhenJIRmnKflYvscb3yEIOuUUi7ofscHb+9tAFZuChVKRcTSYxbVvbqnSw9opTr2SKP2Qq7E5VEzrPjGLgeCMeogGELkxWBF4I+su1XzY9TIV8uOMX4o6bA8iAKdFE="
   on:
     branch: master
 
