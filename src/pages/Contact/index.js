@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Recaptcha from 'react-recaptcha';
 import api from '../../utils/api';
+import CallToAction from '../../components/CallToAction';
 import styles from './Contact.module.css';
 
 export default class Contact extends Component {
@@ -14,12 +15,10 @@ export default class Contact extends Component {
   executeRecaptcha = (e) => {
     e.preventDefault();
     this.recaptchaInstance.execute();
-    console.log('executing recaptcha');
   };
 
   onSubmit = async () => {
     const { name, contact, description } = this.state;
-    console.log('on submit');
     await api.post('/api/contact', { name, contact, description });
     this.setState({ submitted: true });
   };
@@ -38,6 +37,12 @@ export default class Contact extends Component {
             </div>
           ) : (
             <form className={styles.form}>
+              <h2>Let's grab a coffee</h2>
+
+              <input type="text" placeholder="Name" value={name} onChange={e => this.setState({ name: e.target.value })} />
+              <input type="text" placeholder="Best form of contact" value={contact} onChange={e => this.setState({ contact: e.target.value })} />
+              <textarea placeholder="What's on your mind?" value={description} onChange={e => this.setState({ description: e.target.value })}></textarea>
+
               <Recaptcha
                 ref={(ref) => { this.recaptchaInstance = ref; }}
                 sitekey="6LchOFEUAAAAAF8yeVbDYAkYwQgQ2P3SbvR93Jub"
@@ -45,13 +50,9 @@ export default class Contact extends Component {
                 verifyCallback={this.onSubmit}
               />
 
-              <h2>Let's grab a coffee</h2>
-
-              <input type="text" placeholder="Name" value={name} onChange={e => this.setState({ name: e.target.value })} />
-              <input type="text" placeholder="Best form of contact" value={contact} onChange={e => this.setState({ contact: e.target.value })} />
-              <textarea placeholder="What's on your mind?" value={description} onChange={e => this.setState({ description: e.target.value })}></textarea>
-
-              <button onClick={this.executeRecaptcha} disabled={!name || !contact || !description}>Get in touch</button>
+              <CallToAction>
+                <button type="submit" onClick={this.executeRecaptcha} disabled={!name || !contact || !description} className={styles.submitButton}>Get in touch</button>
+              </CallToAction>
             </form>
           )
         }

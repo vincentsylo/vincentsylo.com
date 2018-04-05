@@ -1,0 +1,38 @@
+.button {
+  background-color: var(--primaryColor);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.button:not(:disabled):hover {
+  background-color: #fff;
+  color: var(--primaryColor);
+}
+
+.button:not(:disabled):before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primaryColor);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.button:not(:disabled):hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.button:disabled {
+  background-color: var(--secondaryColor);
+}

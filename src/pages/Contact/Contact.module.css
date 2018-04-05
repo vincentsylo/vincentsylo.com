@@ -31,3 +31,7 @@
 .submitted {
   padding: 40px;
 }
+
+.submitButton {
+  width: 420px;
+}
