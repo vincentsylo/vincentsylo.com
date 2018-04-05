@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Recaptcha from 'react-recaptcha';
+import api from '../../utils/api';
 import styles from './Contact.module.css';
 
 export default class Contact extends Component {
@@ -13,11 +14,13 @@ export default class Contact extends Component {
   executeRecaptcha = (e) => {
     e.preventDefault();
     this.recaptchaInstance.execute();
-    console.log('exe')
   };
 
-  onSubmit = () => {
-    console.log('submit')
+  onSubmit = async () => {
+    const { name, contact, description } = this.state;
+    await api.post('/api/contact', {
+      name, contact, description,
+    });
     this.setState({ submitted: true });
   };
 
