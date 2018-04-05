@@ -13,6 +13,4 @@ deploy:
   provider: firebase
   token:
     secure: "$FIREBASE_TOKEN"
-  local_dir: build
-  on:
-    branch: master
+
