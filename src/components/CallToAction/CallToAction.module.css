@@ -2,6 +2,7 @@
   background-color: var(--primaryColor);
   border: none;
   color: #fff;
+  cursor: pointer;
   font-weight: 700;
   padding: 16px;
   position: relative;

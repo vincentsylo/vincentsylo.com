@@ -9,6 +9,7 @@ export default class Contact extends Component {
     name: '',
     contact: '',
     description: '',
+    submitting: false,
     submitted: false,
   };
 
@@ -19,12 +20,13 @@ export default class Contact extends Component {
 
   onSubmit = async () => {
     const { name, contact, description } = this.state;
+    this.setState({ submitting: true });
     await api.post('/api/contact', { name, contact, description });
-    this.setState({ submitted: true });
+    this.setState({ submitted: true, submitting: false });
   };
 
   render() {
-    const { name, contact, description, submitted } = this.state;
+    const { name, contact, description, submitted, submitting } = this.state;
 
     return (
       <div className={styles.container}>
@@ -39,6 +41,8 @@ export default class Contact extends Component {
             <form className={styles.form}>
               <h2>Let's grab a coffee</h2>
 
+              <p className={styles.description}>Fill out the form below and I'll get back to you shortly!</p>
+
               <input type="text" placeholder="Name" value={name} onChange={e => this.setState({ name: e.target.value })} />
               <input type="text" placeholder="Best form of contact" value={contact} onChange={e => this.setState({ contact: e.target.value })} />
               <textarea placeholder="What's on your mind?" value={description} onChange={e => this.setState({ description: e.target.value })}></textarea>
@@ -51,7 +55,7 @@ export default class Contact extends Component {
               />
 
               <CallToAction>
-                <button type="submit" onClick={this.executeRecaptcha} disabled={!name || !contact || !description} className={styles.submitButton}>Get in touch</button>
+                <button type="submit" onClick={this.executeRecaptcha} disabled={!name || !contact || !description || submitting} className={styles.submitButton}>Get in touch</button>
               </CallToAction>
             </form>
           )
