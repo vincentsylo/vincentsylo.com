@@ -21,8 +21,8 @@ export default {
     return response.data;
   },
 
-  async post(url, params, headers) {
-    const response = await axios.post(url, params, { headers });
+  async post(url, params) {
+    const response = await axios.post(url, params);
     return response.data;
   },
 };
