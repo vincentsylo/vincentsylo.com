@@ -47,16 +47,16 @@ export default class Contact extends Component {
               <input type="text" placeholder="Best form of contact" value={contact} onChange={e => this.setState({ contact: e.target.value })} />
               <textarea placeholder="What's on your mind?" value={description} onChange={e => this.setState({ description: e.target.value })}></textarea>
 
+              <CallToAction>
+                <button type="submit" onClick={this.executeRecaptcha} disabled={!name || !contact || !description || submitting} className={styles.submitButton}>Get in touch</button>
+              </CallToAction>
+
               <Recaptcha
                 ref={(ref) => { this.recaptchaInstance = ref; }}
                 sitekey="6LchOFEUAAAAAF8yeVbDYAkYwQgQ2P3SbvR93Jub"
                 size="invisible"
                 verifyCallback={this.onSubmit}
               />
-
-              <CallToAction>
-                <button type="submit" onClick={this.executeRecaptcha} disabled={!name || !contact || !description || submitting} className={styles.submitButton}>Get in touch</button>
-              </CallToAction>
             </form>
           )
         }
