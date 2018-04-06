@@ -18,10 +18,10 @@ export default class Contact extends Component {
     this.recaptchaInstance.execute();
   };
 
-  onSubmit = async () => {
+  onSubmit = async (response) => {
     const { name, contact, description } = this.state;
     this.setState({ submitting: true });
-    await api.post('/api/contact', { name, contact, description });
+    await api.post('/api/contact', { name, contact, description, response });
     this.setState({ submitted: true, submitting: false });
   };
 
