@@ -56,6 +56,7 @@ export default class Contact extends Component {
                 sitekey="6LchOFEUAAAAAF8yeVbDYAkYwQgQ2P3SbvR93Jub"
                 size="invisible"
                 verifyCallback={this.onSubmit}
+                render="explicit"
               />
             </form>
           )
