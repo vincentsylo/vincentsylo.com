@@ -6,7 +6,7 @@
 
 Hi, Vincent here. I'm a software engineer in my day job and provide web & mobile consultancy services after hours.
 
-This is my personal portfolio website created to showcase that building a scaleable website can be quite cheap by leveraging your frontend skills, as well as serverless compute
+This is my personal portfolio website created to showcase that building a scaleable website can be quite cheap by leveraging your frontend skills, as well as serverless compute.
 
 The only cost involved is the renewal of my domain name, [vincentsylo.com](https://www.vincentsylo.com/). 
 
@@ -51,5 +51,5 @@ yarn build
 ## What's next?
 
 - Adding a blog, formatted for [Medium](https://medium.com), and imported directly into Medium.
-- Server side rendering with [react-snapshot](https://github.com/geelen/react-snapshot) - free
+- Server side rendering with [react-snapshot](https://github.com/geelen/react-snapshot) - free.
 - *alternatively* [prerender.io](https://prerender.io/pricing) - free up to 250 pages.
