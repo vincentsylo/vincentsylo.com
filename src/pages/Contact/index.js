@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Recaptcha from 'react-recaptcha';
 import api from '../../utils/api';
+import scrollTo from '../../utils/scrollTo';
 import CallToAction from '../../components/CallToAction';
 import styles from './Contact.module.css';
 
@@ -11,6 +12,22 @@ export default class Contact extends Component {
     description: '',
     submitting: false,
     submitted: false,
+  };
+
+  componentDidMount() {
+    window.addEventListener('load', this.handleLoad);
+
+    if (document.readyState === 'complete') {
+      this.handleLoad();
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('load', this.handleLoad);
+  }
+
+  handleLoad = () => {
+    scrollTo(this.component);
   };
 
   executeRecaptcha = (e) => {
@@ -29,7 +46,7 @@ export default class Contact extends Component {
     const { name, contact, description, submitted, submitting } = this.state;
 
     return (
-      <div className={styles.container}>
+      <div className={styles.container} ref={(ref) => { this.component = ref; }}>
         {
           submitted ? (
             <div className={styles.submitted}>

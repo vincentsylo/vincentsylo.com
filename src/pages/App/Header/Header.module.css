@@ -43,16 +43,6 @@
   cursor: pointer;
 }
 
-.link.contact {
-  background-color: var(--primaryColor);
-  color: #fff;
-}
-
-.link.contact:hover {
-  background-color: #fff;
-  color: var(--primaryColor);
-}
-
 .flex {
   flex: 1;
 }
