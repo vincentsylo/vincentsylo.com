@@ -21,13 +21,13 @@ export default class Header extends Component {
 
   onCloseNav = () => {
     this.setState({ showNavModal: false }, () => {
-      document.body.classList.remove(styles.modalOpen);
+      document.body.classList.remove(styles.noScroll);
     });
   };
 
   onOpenNav = () => {
     this.setState({ showNavModal: true }, () => {
-      document.body.classList.add(styles.modalOpen);
+      document.body.classList.add(styles.noScroll);
     });
   };
 
@@ -38,20 +38,21 @@ export default class Header extends Component {
       <header className={styles.header}>
         <Link to="/" onClick={this.onCloseNav}><Logo /></Link>
 
-        <Link to="/" className={styles.title} onClick={this.onCloseNav}><span className={styles.v}>vincent</span><span className={styles.sy}>sy</span><span className={styles.lo}>lo</span></Link>
+        <div className={styles.titleContainer}>
+          <Link to="/" onClick={this.onCloseNav} className={styles.title}><span className={styles.v}>vincent</span><span className={styles.sy}>sy</span><span className={styles.lo}>lo</span></Link>
+        </div>
 
         <nav className={cx(styles.links, {
-          [styles.hideNav]: !this.state.showNavModal,
+          [styles.modalOpen]: showNavModal,
+          [styles.modalClosed]: !showNavModal,
         })}>
-          {
-            showNavModal ? (
-            <div className={styles.menuHeader}>
-              <Link to="/" onClick={this.onCloseNav}><Logo /></Link>
-              <Link to="/" className={styles.title} onClick={this.onCloseNav}><span className={styles.v}>vincent</span><span className={styles.sy}>sy</span><span className={styles.lo}>lo</span></Link>
-              <button onClick={this.onCloseNav} className={styles.closeButton}><i className="fal fa-3x fa-times" /></button>
+          <div className={styles.smallMenuHeader}>
+            <Link to="/" onClick={this.onCloseNav}><Logo /></Link>
+            <div className={styles.titleContainer}>
+              <Link to="/" onClick={this.onCloseNav} className={styles.title}><span className={styles.v}>vincent</span><span className={styles.sy}>sy</span><span className={styles.lo}>lo</span></Link>
             </div>
-            ) : null
-          }
+            <button onClick={this.onCloseNav} className={styles.closeButton}><i className="fal fa-3x fa-times" /></button>
+          </div>
           <SocialLinks />
           <a href="https://www.dropbox.com/s/j38gs968c878sw6/Vincent-Lo-CV.pdf?dl=0" className={styles.link} target="_blank" rel="noopener noreferrer">resume</a>
           <Link to="/contact" className={cx(styles.link, styles.contact)} onClick={this.onCloseNav}>get in touch</Link>

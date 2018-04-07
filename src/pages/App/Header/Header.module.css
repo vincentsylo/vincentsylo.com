@@ -4,14 +4,17 @@
   justify-content: space-between;
 }
 
-.title {
+.titleContainer {
   align-self: center;
-  color: var(--primaryTextColor);
   flex: 1;
+  padding-left: 8px;
+}
+
+.title {
+  color: var(--primaryTextColor);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 4px;
-  padding-left: 8px;
   text-decoration: none;
 }
 
@@ -19,6 +22,7 @@
   display: flex;
   margin: 0;
   padding: 0;
+  transition: all 0.1s ease;
 }
 
 .link {
@@ -31,7 +35,7 @@
   justify-content: center;
   padding: 0 16px;
   text-decoration: none;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .link:hover {
@@ -49,19 +53,12 @@
   color: var(--primaryColor);
 }
 
-.smallOnly {
-  display: none;
-}
-
 .flex {
   flex: 1;
 }
 
-.menuHeader {
-  align-items: center;
-  display: flex;
-  height: 100px;
-  justify-content: space-between;
+.smallMenuHeader {
+  display: none;
 }
 
 .closeButton {
@@ -87,28 +84,46 @@
   color: var(--primaryTextColor);
 }
 
-.modalOpen {
+.smallOnly {
+  display: none;
+}
+
+.noScroll {
   overflow: hidden;
 }
 
 @media (max-width: 768px) {
+  .modalOpen {
+    opacity: 1;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .modalClosed {
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
+  }
+
   .links {
     background-color: #fff;
     bottom: 0;
     flex-direction: column;
     left: 0;
-    opacity: 1;
-    position: fixed;
     right: 0;
     top: 0;
-    z-index: 10;
   }
 
-  .links > *:not(.menuHeader) {
+  .links > *:not(.smallMenuHeader) {
     flex: 1;
   }
 
-  .links.hideNav,
+  .smallMenuHeader {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+  }
+
   .largeOnly {
     display: none;
   }
