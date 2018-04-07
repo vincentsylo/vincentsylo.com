@@ -1,6 +1,5 @@
 .container {
   margin: 0 auto;
-  text-align: center;
   max-width: var(--supportedLargeWidth);
 }
 
@@ -28,6 +27,8 @@
   color: #fff;
   display: flex;
   justify-content: center;
+  margin: 0;
+  text-align: center;
 }
 
 .rightToLeft {
@@ -56,4 +57,18 @@
   line-height: 2;
   text-decoration: none;
   width: 100px;
+}
+
+.title {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .leftToRight {
+    flex-direction: column;
+  }
+
+  .rightToLeft {
+    flex-direction: column;
+  }
 }

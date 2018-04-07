@@ -11,6 +11,14 @@ export default class Header extends Component {
     showNavModal: false,
   };
 
+  componentDidMount() {
+    window.addEventListener('resize', this.onCloseNav);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onCloseNav);
+  }
+
   onCloseNav = () => {
     this.setState({ showNavModal: false });
   };
@@ -26,7 +34,7 @@ export default class Header extends Component {
       <header className={styles.header}>
         <Link to="/" onClick={this.onCloseNav}><Logo /></Link>
 
-        <Link to="/" className={styles.title} onClick={this.onCloseNav}>vincentsylo</Link>
+        <Link to="/" className={styles.title} onClick={this.onCloseNav}><span className={styles.v}>vincent</span><span className={styles.sy}>sy</span><span className={styles.lo}>lo</span></Link>
 
         <nav className={cx(styles.links, {
           [styles.hideNav]: !this.state.showNavModal,
@@ -35,7 +43,7 @@ export default class Header extends Component {
             showNavModal ? (
             <div className={styles.menuHeader}>
               <Link to="/" onClick={this.onCloseNav}><Logo /></Link>
-              <Link to="/" className={styles.title} onClick={this.onCloseNav}>vincentsylo</Link>
+              <Link to="/" className={styles.title} onClick={this.onCloseNav}><span className={styles.v}>vincent</span><span className={styles.sy}>sy</span><span className={styles.lo}>lo</span></Link>
               <button onClick={this.onCloseNav} className={styles.closeButton}><i className="fal fa-3x fa-times" /></button>
             </div>
             ) : null

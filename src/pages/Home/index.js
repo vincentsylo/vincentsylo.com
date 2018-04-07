@@ -25,7 +25,7 @@ export default class Home extends Component {
         </div>
 
         <div className={cx(styles.section, styles.column)}>
-          <h2>Let's grab a coffee</h2>
+          <h2 className={styles.title}>Let's grab a coffee</h2>
           <p>I'm an <strong>advocate for transparency</strong> and believe it builds connections. I love having open discussions from <strong>all things tech</strong>, <strong>startups</strong>, <strong>career growth</strong> to <strong>travelling</strong> and <strong>investment</strong>.</p>
           <p>If you're interested in any of the above, or even working together - let's grab a coffee!</p>
           <CallToAction><Link to="/contact">Get in touch</Link></CallToAction>

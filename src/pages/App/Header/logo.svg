@@ -3,13 +3,13 @@
 <svg class="header__logo" width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
     <rect x="0" y="0" width="500" height="500" style="fill:#fa8484;fill-opacity:0;" />
     <g id="Code">
-        <path class="logo__slash" d="M320.94,175.897l-43.301,-25l-100,173.206l43.301,25l100,-173.206Z" style="fill:#fff;" />
+        <path class="logo__slash" d="M320.94,175.897l-43.301,-25l-100,173.206l43.301,25l100,-173.206Z" />
         <g class="logo__l">
-            <path d="M349.289,108.579l-35.355,35.355l91.924,91.924l35.355,-35.355l-91.924,-91.924Z" style="fill:#fff;" />
+            <path d="M349.289,108.579l-35.355,35.355l91.924,91.924l35.355,-35.355l-91.924,-91.924Z" />
             <path d="M313.934,356.066l35.355,35.355l141.422,-141.421l-35.356,-35.355l-141.421,141.421Z" />
         </g>
         <g class="logo__v">
-            <path d="M150.711,391.421l35.355,-35.355l-91.924,-91.924l-35.355,35.355l91.924,91.924Z" style="fill:#fff;" />
+            <path d="M150.711,391.421l35.355,-35.355l-91.924,-91.924l-35.355,35.355l91.924,91.924Z" />
             <path d="M186.066,143.934l-35.355,-35.355l-141.422,141.421l35.356,35.355l141.421,-141.421Z" />
         </g>
     </g>

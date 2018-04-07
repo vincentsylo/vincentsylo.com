@@ -75,6 +75,18 @@
   outline: none;
 }
 
+.v {
+  color: var(--primaryColor);
+}
+
+.sy {
+  color: var(--secondaryColor);
+}
+
+.lo {
+  color: var(--primaryTextColor);
+}
+
 @media (max-width: 768px) {
   .links {
     background-color: #fff;

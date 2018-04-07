@@ -21,7 +21,8 @@
   border-radius: 2px;
   font-size: 14px;
   padding: 16px 8px;
-  width: 400px;
+  max-width: 400px;
+  width: 80%;
 }
 
 .form textarea {
@@ -33,7 +34,8 @@
 }
 
 .submitButton {
-  width: 420px;
+  max-width: 420px;
+  width: 80%;
 }
 
 .description {

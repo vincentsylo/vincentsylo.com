@@ -6,13 +6,13 @@
 }
 
 .header__logo {
-  background-color: var(--primaryColor);
   height: 100px;
   width: 100px;
 }
 
 .header__logo .logo__v {
   animation: v var(--animationSpeed) var(--animationEasing) var(--animationDelay) forwards;
+  fill: var(--primaryColor);
   transform-origin: center;
 }
 
@@ -27,6 +27,7 @@
 
 .header__logo .logo__l {
   animation: l var(--animationSpeed) var(--animationEasing)  var(--animationDelay) forwards;
+  fill: var(--primaryTextColor);
   transform-origin: center;
 }
 
@@ -41,6 +42,7 @@
 
 .header__logo .logo__slash {
   animation: slash var(--animationSpeed) var(--animationEasing)  var(--animationDelay) forwards;
+  fill: var(--secondaryColor);
   transform-origin: center;
 }
 
