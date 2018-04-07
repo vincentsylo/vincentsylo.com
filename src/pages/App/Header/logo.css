@@ -18,10 +18,10 @@
 
 @keyframes v {
   80% {
-    transform: var(--maxScale) rotate(-100deg) translate(220px, -40px);
+    transform: var(--maxScale) translateX(-50px) translateY(-225px) rotate(-100deg);
   }
   100% {
-    transform: scale(1) rotate(-90deg) translate(220px, -40px);
+    transform: scale(1) translateX(-40px) translateY(-215px) rotate(-90deg);
   }
 }
 
@@ -33,10 +33,10 @@
 
 @keyframes l {
   80% {
-    transform: var(--maxScale) rotate(190deg) translate(-220px, -40px);
+    transform: var(--maxScale) rotate(190deg) translateX(-220px) translateY(-40px);
   }
   100% {
-    transform: scale(1) rotate(180deg) translate(-220px, -40px);
+    transform: scale(1) rotate(180deg) translateX(-220px) translateY(-40px);
   }
 }
 
@@ -48,9 +48,9 @@
 
 @keyframes slash {
   80% {
-    transform: var(--maxScale) rotate(-75deg) translate(-50px, -100px);
+    transform: var(--maxScale) rotate(-75deg) translateY(-50px) translateX(-100px);
   }
   100% {
-    transform: scale(1) rotate(-75deg) translate(-40px, -90px);
+    transform: scale(1) rotate(-75deg) translateY(-40px) translateX(-90px);
   }
 }
