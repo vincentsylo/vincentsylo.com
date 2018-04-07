@@ -6,51 +6,19 @@
 }
 
 .header__logo {
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  padding: 8px;
+  width: 60px;
 }
 
 .header__logo .logo__v {
-  animation: v var(--animationSpeed) var(--animationEasing) var(--animationDelay) forwards;
   fill: var(--primaryColor);
-  transform-origin: center;
-}
-
-@keyframes v {
-  80% {
-    transform: var(--maxScale) rotate(-100deg) translate(220px, -40px);
-  }
-  100% {
-    transform: scale(1) rotate(-90deg) translate(220px, -40px);
-  }
 }
 
 .header__logo .logo__l {
-  animation: l var(--animationSpeed) var(--animationEasing)  var(--animationDelay) forwards;
   fill: var(--primaryTextColor);
-  transform-origin: center;
-}
-
-@keyframes l {
-  80% {
-    transform: var(--maxScale) rotate(190deg) translate(-220px, -40px);
-  }
-  100% {
-    transform: scale(1) rotate(180deg) translate(-220px, -40px);
-  }
 }
 
 .header__logo .logo__slash {
-  animation: slash var(--animationSpeed) var(--animationEasing)  var(--animationDelay) forwards;
   fill: var(--secondaryColor);
-  transform-origin: center;
-}
-
-@keyframes slash {
-  80% {
-    transform: var(--maxScale) rotate(-75deg) translate(-100px, -50px);
-  }
-  100% {
-    transform: scale(1) rotate(-75deg) translate(-90px, -40px);
-  }
 }
