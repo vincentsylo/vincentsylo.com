@@ -20,11 +20,15 @@ export default class Header extends Component {
   }
 
   onCloseNav = () => {
-    this.setState({ showNavModal: false });
+    this.setState({ showNavModal: false }, () => {
+      document.body.classList.remove(styles.modalOpen);
+    });
   };
 
   onOpenNav = () => {
-    this.setState({ showNavModal: true });
+    this.setState({ showNavModal: true }, () => {
+      document.body.classList.add(styles.modalOpen);
+    });
   };
 
   render() {

@@ -87,6 +87,10 @@
   color: var(--primaryTextColor);
 }
 
+.modalOpen {
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .links {
     background-color: #fff;
@@ -104,15 +108,12 @@
     flex: 1;
   }
 
+  .links.hideNav,
   .largeOnly {
     display: none;
   }
 
   .smallOnly {
     display: block;
-  }
-
-  .links.hideNav {
-    display: none;
   }
 }

@@ -14,7 +14,7 @@
 
 .row > * {
   flex: 1;
-  padding: 40px 20px;
+  padding: 0 20px;
 }
 
 .leftToRight {
@@ -28,6 +28,7 @@
   display: flex;
   justify-content: center;
   margin: 0;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -60,7 +61,12 @@
 }
 
 .title {
+  margin: 0 0 20px;
   text-align: center;
+}
+
+.cta {
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {

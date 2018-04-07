@@ -1,5 +1,6 @@
 .container {
   margin: 0 auto;
+  padding: 20px;
   text-align: center;
   max-width: var(--supportedLargeWidth);
 }
@@ -20,9 +21,9 @@
   border: var(--secondaryColor) solid 1px;
   border-radius: 2px;
   font-size: 14px;
-  padding: 16px 8px;
   max-width: 400px;
-  width: 80%;
+  padding: 16px 8px;
+  width: 95%;
 }
 
 .form textarea {
@@ -34,8 +35,9 @@
 }
 
 .submitButton {
+  font-size: 16px;
   max-width: 420px;
-  width: 80%;
+  width: 100%;
 }
 
 .description {
