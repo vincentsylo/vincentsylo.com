@@ -54,7 +54,6 @@ export default class Header extends Component {
             <button onClick={this.onCloseNav} className={styles.closeButton}><i className="fal fa-3x fa-times" /></button>
           </div>
           <SocialLinks />
-          <a href="https://www.dropbox.com/s/j38gs968c878sw6/Vincent-Lo-CV.pdf?dl=0" className={styles.link} target="_blank" rel="noopener noreferrer">resume</a>
           <Link to="/contact" className={cx(styles.link, styles.contact)} onClick={this.onCloseNav}>get in touch</Link>
           { showNavModal ? <div className={styles.flex} /> : null }
         </nav>
