@@ -17,7 +17,7 @@ export default class SocialLinks extends Component {
 
     return (
       <div className={styles.links}>
-        <a href="https://github.com/vincentsylo" className={cx(styles.link, styles.github, { [styles.inverse]: inverse })} target="_blank" rel="noopener noreferrer"><i className="fab fa-2x fa-github" /></a>
+        <a href="https://github.com/vincentsylo" className={cx(styles.link, styles.github, { [styles.inverse]: inverse })} target="_blank" rel="noopener noreferrer"><i className="fab fa-2x fa-github-square" /></a>
         <a href="https://www.linkedin.com/in/vincentsylo" className={cx(styles.link, styles.linkedin, { [styles.inverse]: inverse })} target="_blank" rel="noopener noreferrer"><i className="fab fa-2x fa-linkedin" /></a>
       </div>
     );
